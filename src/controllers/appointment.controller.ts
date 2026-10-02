@@ -37,7 +37,16 @@ async function getById(req: Request<{ id: string }>, res: Response) {
 }
 
 async function create(req: Request, res: Response) {
+    const {dateTime} = req.body
     try {
+        const existingAppointment = 
+        await appointmentRepository.findActiveByDateTime(dateTime);
+
+        if (existingAppointment) {
+            return res.status(409).json({
+                message: "Já existe um agendamento para esse horário."
+            });
+        }
         const appointment = await appointmentRepository.create(req.body);
 
         res.status(201).json(appointment);
