@@ -1,0 +1,406 @@
+{
+  "info": {
+    "_postman_id": "1b846d8f-342e-4950-9a21-c7bddb8866f2",
+    "name": "barber-shop-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57629617",
+    "_collection_link": "https://go.postman.co/collection/57629617-1b846d8f-342e-4950-9a21-c7bddb8866f2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "GET categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/categories/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST categories",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Barba\",\r\n  \"description\": \"Serviços relacionados à barba- teste de create\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/categories",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/categories/b38a1f5f-9318-4e00-9100-49b41763199a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "categories",
+                "b38a1f5f-9318-4e00-9100-49b41763199a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT categories",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Barba e Bigode estiloso\",\r\n  \"description\": \"Serviços de barba e bigode premium\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/categories/b38a1f5f-9318-4e00-9100-49b41763199a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "categories",
+                "b38a1f5f-9318-4e00-9100-49b41763199a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL categories",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/categories/ae6893e1-f060-4060-99d5-4539d478318e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "categories",
+                "ae6893e1-f060-4060-99d5-4539d478318e"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "item": [
+        {
+          "name": "GET services",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/services",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST services",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category_id\": \"b38a1f5f-9318-4e00-9100-49b41763199a\",\r\n  \"name\": \"Corte + Barba\",\r\n  \"price\": 50.00,\r\n  \"estimated_minutes\": 60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/services/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "services",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/services/7e9ad23d-2212-4126-b481-9723e78240e1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "services",
+                "7e9ad23d-2212-4126-b481-9723e78240e1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT services",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Corte + Barba Premium teste\",\r\n  \"price\": 60.00,\r\n  \"estimated_minutes\": 70\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/services/7e9ad23d-2212-4126-b481-9723e78240e1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "services",
+                "7e9ad23d-2212-4126-b481-9723e78240e1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL services",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/services/7e9ad23d-2212-4126-b481-9723e78240e1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "services",
+                "7e9ad23d-2212-4126-b481-9723e78240e1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Appointments",
+      "item": [
+        {
+          "name": "GET appointments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/appointments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST appointments",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"service_id\": \"ff32b380-2ed7-4120-bd57-2b0312841836\",\r\n  \"client_name\": \"João da Silva Santoss\",\r\n  \"client_phone\": \"41999999999\",\r\n  \"date_time\": \"2026-10-05T13:10:00+00:00\",\r\n  \"status\": \"completed\",\r\n  \"created_at\": \"2026-9-02T13:42:36.700385+00:00\"\r\n}\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/appointments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET appointments By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/appointments/daae8f3a-4127-45b7-85f6-a4c07df64771",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments",
+                "daae8f3a-4127-45b7-85f6-a4c07df64771"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT appointments",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"client_name\": \"João da Silva Juniorr\",\r\n  \"client_phone\": \"41988888888\",\r\n  \"date_time\": \"2026-10-10T15:00:00-03:00\",\r\n  \"status\": \"confirmed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/appointments/624a9f68-0128-4263-b2b2-d12e5b37619f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments",
+                "624a9f68-0128-4263-b2b2-d12e5b37619f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL appointments",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/appointments/b9b45525-3c09-4a26-8a89-2c27bcbc61e3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments",
+                "b9b45525-3c09-4a26-8a89-2c27bcbc61e3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH appointments",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"completed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/appointments/9cafdf18-7f44-44e9-8eb4-f1b3bf67a495/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "appointments",
+                "9cafdf18-7f44-44e9-8eb4-f1b3bf67a495",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
